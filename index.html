@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm</title>
+</head>
+<body>
+<script>
+    function binhphuong(a){
+        let binhphuong = Math.pow(a, 2)
+        document.write("Bình phương của "+a+" là: "+binhphuong+"<hr>")
+        // return binhphuong
+    }
+    binhphuong(3)
+    function hinhtron(r){
+        let cv = 2*r*3.14
+        let dt = Math.pow(r, 2)*3.14
+        document.write("Chu vi hình tròn có bán kính "+r+" là : "+cv+"<br>")
+        document.write("Diện tích hình tròn có bán kính "+r+" là : "+dt+"<hr>")
+    }
+    hinhtron(4)
+    function giaithua(n){
+        let gt = 1
+        for (let i = n; i >=1 ; i--) {
+            gt*=i
+        }
+        document.write("Giai thừa của "+n+" là: "+gt+"<hr>")
+    }
+    giaithua(4)
+    function tong3nguyen(a,b,c){
+        let tong =a+b+c
+        document.write("Tổng của ba số "+a+", "+b+", "+c+" là: "+tong+"<hr>")
+        return tong
+    }
+    tong3nguyen(2,3,4)
+    function ktsonguyen(a){
+        document.write("Số nguyên "+a+" có phải nguyên dương không: ")
+
+        return (Number.isInteger(a) && a > 0)
+    }
+
+    document.write(ktsonguyen(2)+"<hr>")
+    let mang =[19, 1, 20, 3, 2, 4]
+    function tongsolonhon10(arr){
+        let tong = 0
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > 10){
+                tong +=arr[i]
+            }
+        }
+        // document.write("Tổng các số lớn hơn 10 trong mảng "+arr+" là: "+tong+"<hr>")
+        return tong
+    }
+    document.write("Tổng các số lớn hơn 10 trong mảng "+mang+" là: "+tongsolonhon10(mang)+"<hr>")
+    function slsolonhon10(arr){
+        let dem = 0
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > 10){
+                dem++
+            }
+        }
+        // document.write("Số lượng các số lớn hơn 10 trong mảng "+arr+" là: "+dem+"<hr>")
+        return dem
+    }
+    document.write("Số lượng các số lớn hơn 10 trong mảng "+mang+" là: "+slsolonhon10(mang)+"<hr>")
+    function tbcsolonhon10(arr){
+        let tbc = tongsolonhon10(arr)/slsolonhon10(arr)
+        if (slsolonhon10(arr) === 0){
+            return 0
+        }
+        return tbc
+    }
+    document.write("Trung bình cộng của các số lớn hơn 10 trong mảng "+mang+" là: "+tbcsolonhon10(mang))
+
+</script>
+</body>
+</html>
