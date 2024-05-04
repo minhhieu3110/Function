@@ -9,7 +9,7 @@
     function binhphuong(a){
         let binhphuong = Math.pow(a, 2)
         document.write("Bình phương của "+a+" là: "+binhphuong+"<hr>")
-        // return binhphuong
+         return binhphuong
     }
     binhphuong(3)
     function hinhtron(r){
@@ -17,6 +17,8 @@
         let dt = Math.pow(r, 2)*3.14
         document.write("Chu vi hình tròn có bán kính "+r+" là : "+cv+"<br>")
         document.write("Diện tích hình tròn có bán kính "+r+" là : "+dt+"<hr>")
+        return cv
+        return dt
     }
     hinhtron(4)
     function giaithua(n){
@@ -25,6 +27,7 @@
             gt*=i
         }
         document.write("Giai thừa của "+n+" là: "+gt+"<hr>")
+        return gt
     }
     giaithua(4)
     function tong3nguyen(a,b,c){
